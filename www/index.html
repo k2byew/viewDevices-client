@@ -38,7 +38,7 @@
             {{group.name}}
           </ion-item>
           <ion-item class="item-accordion"
-                    ng-repeat="item in group.items"
+                    ng-repeat="item in group.items track by $index"
                     ng-show="isGroupShown(group)">
             {{item}}
           </ion-item>
