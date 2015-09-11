@@ -7,6 +7,8 @@ app.controller('MainCtrl', function($scope, $timeout, DeviceService) {
   $scope.groups[0] = {name: 'Vendor', items:deviceData.vendorList};
   $scope.groups[1] = {name: 'IP Address', items:deviceData.ipList};
   $scope.groups[2] = {name: 'MAC Address', items:deviceData.deviceList};
+  $scope.timestamp = new Date(deviceData.timestamp);
+
   });
 
   $scope.doRefresh = function() {
@@ -16,6 +18,7 @@ app.controller('MainCtrl', function($scope, $timeout, DeviceService) {
       $scope.groups[0] = {name: 'Vendor', items:deviceData.vendorList};
       $scope.groups[1] = {name: 'IP Address', items:deviceData.ipList};
       $scope.groups[2] = {name: 'MAC Address', items:deviceData.deviceList};
+      $scope.timestamp = new Date(deviceData.timestamp);
 
       //Stop the ion-refresher from spinning
       $scope.$broadcast('scroll.refreshComplete');
