@@ -1,4 +1,4 @@
-var app = angular.module('ionicApp', ['ionic','angularMoment']);
+var app = angular.module('ionicApp', ['ionic','angularMoment','ngCordova']);
 
 moment.locale('prefixed', {
     relativeTime : {

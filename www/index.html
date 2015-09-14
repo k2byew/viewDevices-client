@@ -16,6 +16,7 @@
     <script src="lib/ionic/js/ionic.bundle.js"></script>
     <script src="js/external/moment.min.js"></script>
     <script src="js/external/angular-moment.min.js"></script>
+    <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
@@ -32,6 +33,7 @@
     <ion-content>
       <ion-refresher
         pulling-icon=""
+        on-pulling="vibratedToast()"
         on-refresh="doRefresh()">
       </ion-refresher>
       <ion-list>

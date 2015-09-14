@@ -1,4 +1,4 @@
-app.controller('MainCtrl', function($scope, $timeout, DeviceService) {
+app.controller('MainCtrl', function($scope, $timeout, DeviceService, $cordovaVibration, $cordovaToast) {
   $scope.deviceData = [];
 
   DeviceService.GetDevice().then(function(deviceData){
@@ -35,6 +35,13 @@ app.controller('MainCtrl', function($scope, $timeout, DeviceService) {
 
   $scope.isGroupShown = function(group) {
     return $scope.shownGroup === group;
+  };
+
+  $scope.duration = 100;
+  $scope.toastMessage = 'Updating...';
+  $scope.vibratedToast = function(){
+    $cordovaVibration.vibrate($scope.duration);
+    $cordovaToast.showShortCenter($scope.toastMessage);
   };
 
 });

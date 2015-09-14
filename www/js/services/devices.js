@@ -1,5 +1,7 @@
 app.factory('DeviceService', function($http){
   var URL = "http://path-to-json.json";
+  // var URL = "/api";
+
   var deviceData = [];
 
   return {

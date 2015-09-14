@@ -1,0 +1,10 @@
+{
+  "name": "APP-NAME",
+  "app_id": "",
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://path-to-json.json"
+    }
+  ]
+}
