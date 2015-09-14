@@ -4,9 +4,13 @@ To begin:
 `ionic start APP-NAME blank`
 
 Then:
+
 `ionic platform add android`
+
 `bower install ngCordova`
+
 `cordova plugin add org.apache.cordova.vibration`
+
 `cordova plugin add https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin.git`
 
 Then update the www directory.
